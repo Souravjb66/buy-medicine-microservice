@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body>
+    <h1>welcome to index</h1>
+    <div>
+        <h1 id="h1"></h1>
+        <h2 id="h2"></h2>
+        <h2 id="h3"></h2>
+    </div>
+    <script>
+        async function getProduct(){
+            const url="http://localhost:8081/get/allproducts"
+            var res=await fetch(url)
+            var product=await res.json()
+            console.log(product)
+            
+            
+
+        }
+        window.onload=getProduct
+        
+    </script>
+</body>
+</html>
